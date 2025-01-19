@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,23 +27,23 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=564be945" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -66,6 +66,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-29-nested-sampling';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Lorem Ipsum" href="test_lecture.html" />
     <link rel="prev" title="Chapter 26: scikit-learn" href="lecture-28-scikit-learn.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -220,6 +221,10 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture-28-scikit-learn.html">Chapter 26: <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code></a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Chapter 27: Nested Sampling</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 8. Additional Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="test_lecture.html">Lorem Ipsum</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -227,9 +232,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -521,10 +531,22 @@ E = \frac{1}{2} k x^2
 <p>First, we need to import the necessary libraries:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
 </pre></div>
 </div>
 </div>
@@ -532,7 +554,7 @@ E = \frac{1}{2} k x^2
 <p>Next, we define the potential energy of the harmonic oscillator:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">potential_energy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">potential_energy</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">k</span><span class="p">):</span>
     <span class="k">return</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">k</span> <span class="o">*</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
 </pre></div>
 </div>
@@ -595,9 +617,6 @@ E = \frac{1}{2} k x^2
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/b6a047856b76dbbcd2f0f7e3f6d94f3faad9260991272038d0c67f69d510cf1b.png" src="_images/b6a047856b76dbbcd2f0f7e3f6d94f3faad9260991272038d0c67f69d510cf1b.png" />
-</div>
 </div>
 <p>The plot shows that the energy of the culled live points decreases with the iteration number.</p>
 <p>We can estimate the partition function of the harmonic oscillator as a function of temperature:</p>
@@ -605,7 +624,7 @@ E = \frac{1}{2} k x^2
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">k_B</span> <span class="o">=</span> <span class="mf">8.617333262E-5</span>  <span class="c1"># Boltzmann constant in eV/K</span>
 
-<span class="k">def</span> <span class="nf">partition_function</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">chi_0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">partition_function</span><span class="p">(</span><span class="n">energies</span><span class="p">,</span> <span class="n">beta</span><span class="p">,</span> <span class="n">chi_0</span><span class="p">):</span>
     <span class="n">Z</span> <span class="o">=</span> <span class="mf">0.0</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">energy</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">energies</span><span class="p">):</span>
         <span class="n">delta_chi</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">*</span> <span class="p">((</span><span class="n">K</span> <span class="o">/</span> <span class="p">(</span><span class="n">K</span> <span class="o">+</span> <span class="mi">1</span><span class="p">))</span> <span class="o">**</span> <span class="n">i</span><span class="p">)</span>
@@ -626,9 +645,9 @@ E = \frac{1}{2} k x^2
 <p>Let’s plot the partition function of the harmonic oscillator as a function of temperature and compare it to the exact partition function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">erf</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">scipy.special</span><span class="w"> </span><span class="kn">import</span> <span class="n">erf</span>
 
-<span class="k">def</span> <span class="nf">exact_partition_function</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">exact_partition_function</span><span class="p">(</span><span class="n">temperature</span><span class="p">,</span> <span class="n">limit</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="n">k_B</span> <span class="o">*</span> <span class="n">temperature</span><span class="p">)</span> <span class="o">*</span> <span class="n">erf</span><span class="p">(</span><span class="n">limit</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">k_B</span> <span class="o">*</span> <span class="n">temperature</span><span class="p">))</span>
 
 <span class="n">exact_partition_functions</span> <span class="o">=</span> <span class="p">[</span><span class="n">exact_partition_function</span><span class="p">(</span><span class="n">T</span><span class="p">,</span> <span class="n">x_max</span><span class="p">)</span> <span class="k">for</span> <span class="n">T</span> <span class="ow">in</span> <span class="n">temperatures</span><span class="p">]</span>
@@ -641,9 +660,6 @@ E = \frac{1}{2} k x^2
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="cell_output docutils container">
-<img alt="_images/27f92f6b9d6838328c9037ace495a489b572774d2d4f4efbfbcd9a59a8add212.png" src="_images/27f92f6b9d6838328c9037ace495a489b572774d2d4f4efbfbcd9a59a8add212.png" />
 </div>
 </div>
 <p>The plot shows that the partition function estimated using the nested sampling algorithm is in good agreement with the exact partition function. Since the partition function is contains all the information needed to calculate the thermodynamic properties of the system, the nested sampling algorithm can be used to estimate the thermodynamic properties of a chemical system.</p>
@@ -693,6 +709,15 @@ E = \frac{1}{2} k x^2
         <p class="prev-next-title">Chapter 26: <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code></p>
       </div>
     </a>
+    <a class="right-next"
+       href="test_lecture.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Lorem Ipsum</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -732,7 +757,7 @@ E = \frac{1}{2} k x^2
   <div class="footer-item">
     
 <p class="component-author">
-By Robert B. Wexler
+By Robert B. Wexler, Erik Thiede
 </p>
 
   </div>
@@ -766,8 +791,8 @@ By Robert B. Wexler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

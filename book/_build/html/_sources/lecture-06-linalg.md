@@ -11,7 +11,7 @@ kernelspec:
   name: python3
 ---
 
-# Chapter 6: Balancing Chemical Equations and Systems of Linear Algebraic Equations
+# Chapter 6.2: Balancing Chemical Equations and Systems of Linear Algebraic Equations
 
 ## Learning Objectives
 

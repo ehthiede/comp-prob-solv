@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Computational Problem Solving in the Chemical Sciences
-author: Robert B. Wexler
+author: Robert B. Wexler, Erik Thiede
 logo: logo.png
 
 # Force re-execution of notebooks on each build.

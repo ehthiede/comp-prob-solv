@@ -16,8 +16,8 @@
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
     document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
-  <!-- 
-    this give us a css class that will be invisible only if js is disabled 
+  <!--
+    this give us a css class that will be invisible only if js is disabled
   -->
   <noscript>
     <style>
@@ -27,23 +27,23 @@
   </noscript>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=87e54e7c" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
     <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=564be945" />
   
   <!-- So that users can add custom icons -->
-  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
 
     <script src="_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
@@ -216,10 +216,14 @@
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 7. Advanced and Emerging Topics in Computational Chemistry</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="lecture-26-newton-raphson.html">Lecture 26: Newton-Raphson Method</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture-27-kinetic-mc.html">Lecture 27: Kinetic Monte Carlo</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture-28-scikit-learn.html">Lecture 28: <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code></a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture-29-nested-sampling.html">Lecture 29: Nested Sampling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture-26-newton-raphson.html">Chapter 24: Newton-Raphson Method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture-27-kinetic-mc.html">Chapter 25: Kinetic Monte Carlo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture-28-scikit-learn.html">Chapter 26: <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture-29-nested-sampling.html">Chapter 27: Nested Sampling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 8. Additional Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="test_lecture.html">Lorem Ipsum</a></li>
 </ul>
 
     </div>
@@ -228,9 +232,14 @@
   
   
   <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
   </div>
-  
-  <div id="rtd-footer-container"></div>
 
 
       </div>
@@ -530,10 +539,10 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 <p>First, we will define a function to initialize the positions and velocities of the particles.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">initialize_particles</span><span class="p">(</span><span class="n">n_particles</span><span class="p">,</span> <span class="n">box_size</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">initialize_particles</span><span class="p">(</span><span class="n">n_particles</span><span class="p">,</span> <span class="n">box_size</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
     <span class="c1"># Place the particles on a square lattice</span>
     <span class="n">n_side</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">ceil</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">n_particles</span><span class="p">)))</span>
     <span class="n">positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_particles</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
@@ -561,6 +570,19 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="k">def</span><span class="w"> </span><span class="nf">initialize_particles</span><span class="p">(</span><span class="n">n_particles</span><span class="p">,</span> <span class="n">box_size</span><span class="p">,</span> <span class="n">temperature</span><span class="p">):</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="c1"># Place the particles on a square lattice</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="plotting-the-initial-particle-positions-and-velocities">
@@ -568,10 +590,10 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 <p>Let’s plot the initial positions and velocities of the particles.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Circle</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">matplotlib.patches</span><span class="w"> </span><span class="kn">import</span> <span class="n">Circle</span>
 
-<span class="k">def</span> <span class="nf">plot_positions</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_positions</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">positions</span><span class="p">)):</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">add_patch</span><span class="p">(</span><span class="n">Circle</span><span class="p">(</span><span class="n">positions</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="mf">0.5</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">))</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
@@ -582,7 +604,7 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
     <span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">ax</span>
 
-<span class="k">def</span> <span class="nf">plot_vectors</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">vectors</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">plot_vectors</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">vectors</span><span class="p">,</span> <span class="n">ax</span><span class="p">,</span> <span class="n">title</span><span class="p">):</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">positions</span><span class="p">)):</span>
         <span class="n">ax</span><span class="o">.</span><span class="n">arrow</span><span class="p">(</span><span class="n">positions</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">positions</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">vectors</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">vectors</span><span class="p">[</span><span class="n">i</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">head_width</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">head_length</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">fc</span><span class="o">=</span><span class="s1">&#39;cyan&#39;</span><span class="p">,</span> <span class="n">ec</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
@@ -608,9 +630,6 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/3a23cb4b72c30cd145d98d605015ff540b7865e2949c34be7920c1ecedd823e6.png" src="_images/3a23cb4b72c30cd145d98d605015ff540b7865e2949c34be7920c1ecedd823e6.png" />
-</div>
 </div>
 </section>
 <section id="calculating-the-forces">
@@ -619,15 +638,15 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Lennard-Jones potential</span>
-<span class="k">def</span> <span class="nf">U</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">U</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">4</span> <span class="o">*</span> <span class="n">epsilon</span> <span class="o">*</span> <span class="p">((</span><span class="n">sigma</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="mi">12</span> <span class="o">-</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span>
 
 <span class="c1"># Lennard-Jones force</span>
-<span class="k">def</span> <span class="nf">F</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">F</span><span class="p">(</span><span class="n">r</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">24</span> <span class="o">*</span> <span class="n">epsilon</span> <span class="o">*</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="mi">12</span> <span class="o">-</span> <span class="p">(</span><span class="n">sigma</span> <span class="o">/</span> <span class="n">r</span><span class="p">)</span><span class="o">**</span><span class="mi">6</span><span class="p">)</span> <span class="o">/</span> <span class="n">r</span>
 
 <span class="c1"># Calculate the forces between the particles</span>
-<span class="k">def</span> <span class="nf">calculate_forces</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">box_size</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">calculate_forces</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">box_size</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
     <span class="n">n_particles</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">positions</span><span class="p">)</span>
     <span class="n">forces</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">n_particles</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
     <span class="n">potential_energy</span> <span class="o">=</span> <span class="mi">0</span>
@@ -661,9 +680,6 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<img alt="_images/196ee15c8e285b04080f51f0df1fd80b68c1a6eb78d3fd513855c94866993161.png" src="_images/196ee15c8e285b04080f51f0df1fd80b68c1a6eb78d3fd513855c94866993161.png" />
-</div>
 </div>
 </section>
 <section id="velocity-verlet-algorithm-with-andersen-thermostat">
@@ -671,7 +687,7 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 <p>Now, we will implement the velocity Verlet algorithm with the Andersen thermostat.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">velocity_verlet</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">forces</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">box_size</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">coupling_constant</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">k_B</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">velocity_verlet</span><span class="p">(</span><span class="n">positions</span><span class="p">,</span> <span class="n">velocities</span><span class="p">,</span> <span class="n">forces</span><span class="p">,</span> <span class="n">mass</span><span class="p">,</span> <span class="n">box_size</span><span class="p">,</span> <span class="n">temperature</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">coupling_constant</span><span class="p">,</span> <span class="n">epsilon</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">sigma</span><span class="o">=</span><span class="mf">1.0</span><span class="p">,</span> <span class="n">k_B</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
     <span class="c1"># Update positions based on current velocities and forces</span>
     <span class="n">positions</span> <span class="o">+=</span> <span class="n">velocities</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">+</span> <span class="n">forces</span> <span class="o">/</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="n">mass</span><span class="p">)</span> <span class="o">*</span> <span class="n">dt</span><span class="o">**</span><span class="mi">2</span>
 
@@ -780,9 +796,6 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="_images/b3f8d08546697fce3e2b3e5829e18f694cddda55e282c2e9a40a009bcc91f73e.png" src="_images/b3f8d08546697fce3e2b3e5829e18f694cddda55e282c2e9a40a009bcc91f73e.png" />
-</div>
 </div>
 </section>
 <section id="plotting-and-analyzing-energy-conservation-and-temperature-control">
@@ -878,9 +891,6 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="_images/54977fd50b9034c69603e3a0bdc46181ee03c576b4f2eeb4ca22a146a539a77c.png" src="_images/54977fd50b9034c69603e3a0bdc46181ee03c576b4f2eeb4ca22a146a539a77c.png" />
-</div>
 </div>
 <p>The plots show that while the kinetic and potential energies fluctuate due to stochastic collisions, the total energy remains relatively stable. This indicates that the Andersen thermostat maintains the system’s temperature without causing significant energy drift.</p>
 <p>The temperature plot demonstrates that the system’s temperature converges to the desired value (<span class="math notranslate nohighlight">\(T = 0.1\)</span>) over time. The fluctuations around the mean temperature are expected due to the finite size of the system and stochastic nature of the thermostat.</p>
@@ -904,9 +914,6 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
 </div>
 </div>
 </details>
-<div class="cell_output docutils container">
-<img alt="_images/6d19aa9c2c61be935b103e6fe902acc027f201d0b424855f6bec5feb0f526350.png" src="_images/6d19aa9c2c61be935b103e6fe902acc027f201d0b424855f6bec5feb0f526350.png" />
-</div>
 </div>
 <p>The snapshots illustrate how particles move and interact under the influence of the Lennard-Jones potential and the Andersen thermostat. Over time, the particles begin to form clusters because their initial separation distances are <strong>greater than the equilibrium distance</strong> of the Lennard-Jones potential, and the <a class="reference external" href="https://en.wikipedia.org/wiki/Lennard-Jones_potential#Thermophysical_properties_of_the_Lennard-Jones_substance">temperature is relatively low</a>. As the simulation progresses, the <strong>attractive forces dominate</strong>, drawing the particles closer together to minimize the system’s potential energy.</p>
 <p>If the simulation were run for a longer duration, the particles would eventually coalesce into a single cluster. <strong>This aggregation is driven by the particles seeking the potential energy minimum at the equilibrium separation distance.</strong> Notice how the particles arrange themselves in a <strong>hexagonally close-packed structure</strong>, which is a common configuration in 2D systems with spherically symmetric interactions like the Lennard-Jones potential.</p>
@@ -1034,7 +1041,7 @@ f_v(v_x) = \sqrt{\frac{m}{2\pi k_\text{B}T}}\exp\left(-\frac{mv_x^2}{2k_\text{B}
   <div class="footer-item">
     
 <p class="component-author">
-By Robert B. Wexler
+By Robert B. Wexler, Erik Thiede
 </p>
 
   </div>
@@ -1068,8 +1075,8 @@ By Robert B. Wexler
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
-<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
 
   <footer class="bd-footer">
   </footer>

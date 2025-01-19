@@ -13,6 +13,8 @@ parts:
     chapters:
     - file: lecture-04-optimization
     - file: lecture-05-integration
+    # - caption: Lecture 6. Vectors, Matrices, and Linear Algebra
+    - file: lecture-06a-intro_vectors
     - file: lecture-06-linalg
   - caption: Part 3. Statistics — Regression and Correlation
     chapters:

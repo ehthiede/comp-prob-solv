@@ -602,6 +602,33 @@
 </div>
 <p>In this example, you’ve seen your first instance of importing a module in Python. The <code class="docutils literal notranslate"><span class="pre">import</span></code> statement allows you to bring additional functionality into your Python programs. In this case, by importing the <code class="docutils literal notranslate"><span class="pre">math</span></code> module, you gain access to a suite of mathematical tools that go beyond basic operations.</p>
 <p>Once imported, you can use any function from the module by prefixing it with <code class="docutils literal notranslate"><span class="pre">math</span></code>. For instance, <code class="docutils literal notranslate"><span class="pre">math.sqrt()</span></code> is the function to compute the square root.</p>
+<p>Python also supports complex numbers, using the <code class="docutils literal notranslate"><span class="pre">j</span></code> suffix to denote the imaginary unit:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1+2j)
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can perform arithmetic operations with complex numbers just like you would with real numbers.
+For instance, the following code should return <span class="math notranslate nohighlight">\(5 + 0j\)</span>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span><span class="n">j</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="mi">2</span><span class="n">j</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(5+0j)
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <hr class="docutils" />
 <section id="practice-exercises">

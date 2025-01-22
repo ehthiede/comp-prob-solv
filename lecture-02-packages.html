@@ -179,7 +179,8 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture-04-optimization.html">Chapter 4: Chemical Reaction Equilibria and Roots of Equations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture-05-integration.html">Chapter 5: Chemical Bonding and Numerical Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture-06-linalg.html">Chapter 6: Balancing Chemical Equations and Systems of Linear Algebraic Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture-06a-intro_vectors.html">Chapter 6.1: A Deeper look at Vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture-06-linalg.html">Chapter 6.2: Balancing Chemical Equations and Systems of Linear Algebraic Equations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Statistics — Regression and Correlation</span></p>
 <ul class="nav bd-sidenav">
@@ -218,10 +219,6 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture-27-kinetic-mc.html">Chapter 25: Kinetic Monte Carlo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture-28-scikit-learn.html">Chapter 26: <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture-29-nested-sampling.html">Chapter 27: Nested Sampling</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 8. Additional Materials</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="test_lecture.html">Lorem Ipsum</a></li>
 </ul>
 
     </div>
@@ -420,6 +417,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-numpy-arrays">1.2 Working with NumPy Arrays</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-numpy">Installing NumPy</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-using-arrays">Creating and Using Arrays</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#introspecting-arrays">Introspecting Arrays</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-and-vector-operations">Matrix and Vector Operations</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-matrix-operations">Advanced Matrix Operations</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-arrays-with-specific-properties">Generating Arrays with Specific Properties</a></li>
@@ -537,14 +535,8 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Create a 3D vector</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">v</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1 2 3]
+&lt;class &#39;numpy.ndarray&#39;&gt;
 </pre></div>
 </div>
 </div>
@@ -559,7 +551,35 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[1 2]
+ [3 4]]
+</pre></div>
 </div>
+</div>
+</div>
+</section>
+<section id="introspecting-arrays">
+<h4>Introspecting Arrays<a class="headerlink" href="#introspecting-arrays" title="Link to this heading">#</a></h4>
+<p>NumPy arrays have several attributes that provide useful information about the array, such as its shape or data type:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the shape of the matrix</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="c1"># Get the data type of the matrix</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">M</span><span class="o">.</span><span class="n">dtype</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(2, 2)
+int64
+</pre></div>
+</div>
+</div>
+</div>
+<p>Note that the <code class="docutils literal notranslate"><span class="pre">shape</span></code> attribute returns a tuple (a data structure similar to a list) containing the dimensions of the array.  The first element of the tuple represents the number of rows, the second element represents the number of columns (if there is a second index), and so on.</p>
 </section>
 <section id="matrix-and-vector-operations">
 <h4>Matrix and Vector Operations<a class="headerlink" href="#matrix-and-vector-operations" title="Link to this heading">#</a></h4>
@@ -589,6 +609,11 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[ 5 11]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Reminder</p>
@@ -607,6 +632,11 @@
 <span class="n">dot_product</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">w</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">dot_product</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
 </pre></div>
 </div>
 </div>
@@ -637,6 +667,15 @@
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>det(M) = -2.0000000000000004
+M_inv = 
+[[-2.   1. ]
+ [ 1.5 -0.5]]
+eigenvalues = [-0.37228132  5.37228132]
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="generating-arrays-with-specific-properties">
@@ -655,6 +694,19 @@
 <span class="c1"># Create a 3x3 array of random numbers</span>
 <span class="n">A</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">A</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0. 0. 0.]
+ [0. 0. 0.]
+ [0. 0. 0.]]
+[[1. 1. 1.]
+ [1. 1. 1.]
+ [1. 1. 1.]]
+[[0.08582614 0.10996061 0.62600984]
+ [0.72665294 0.33149782 0.05447821]
+ [0.693112   0.14941756 0.78973336]]
 </pre></div>
 </div>
 </div>
@@ -734,6 +786,9 @@ Create a 3x3 identity matrix.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/e11d109ea01b62761e440cfbcec9cb258120860b43d88af45ab32471541304cf.png" src="_images/e11d109ea01b62761e440cfbcec9cb258120860b43d88af45ab32471541304cf.png" />
+</div>
 </div>
 </section>
 <section id="line-plots">
@@ -754,6 +809,9 @@ Create a 3x3 identity matrix.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/00f59c1adbf9979c9a7fdc1fd40518ad6fa68b141d34ff6f49d1f960964edc63.png" src="_images/00f59c1adbf9979c9a7fdc1fd40518ad6fa68b141d34ff6f49d1f960964edc63.png" />
+</div>
 </div>
 </section>
 <section id="histograms">
@@ -772,6 +830,9 @@ Create a 3x3 identity matrix.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/2c7d8ea3d6cf8a94afb53838f5cf605da3a7cd21223ba1db2aea9e6c6a6ff3bc.png" src="_images/2c7d8ea3d6cf8a94afb53838f5cf605da3a7cd21223ba1db2aea9e6c6a6ff3bc.png" />
 </div>
 </div>
 </section>
@@ -795,6 +856,9 @@ Create a 3x3 identity matrix.</p>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 </div>
+</div>
+<div class="cell_output docutils container">
+<img alt="_images/585a1c3c28c0bebdff0a075bc4802fba0c3d43fae8b2a06fd6bfc7219594d6d0.png" src="_images/585a1c3c28c0bebdff0a075bc4802fba0c3d43fae8b2a06fd6bfc7219594d6d0.png" />
 </div>
 </div>
 <p>In this example, we’ve customized the plot by changing the line color to red, using a dashed line style, and adding circular markers. We also included a legend, labeled the axes, added a title, and enabled grid lines for better readability.</p>
@@ -847,6 +911,18 @@ Create a histogram of random data with customizations, including changing the co
 <span class="n">s</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">5</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Create a Series from a NumPy array</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -1030,6 +1106,7 @@ Filter a <code class="docutils literal notranslate"><span class="pre">DataFrame<
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#working-with-numpy-arrays">1.2 Working with NumPy Arrays</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-numpy">Installing NumPy</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#creating-and-using-arrays">Creating and Using Arrays</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#introspecting-arrays">Introspecting Arrays</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#matrix-and-vector-operations">Matrix and Vector Operations</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#advanced-matrix-operations">Advanced Matrix Operations</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-arrays-with-specific-properties">Generating Arrays with Specific Properties</a></li>

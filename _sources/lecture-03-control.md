@@ -416,7 +416,7 @@ In this example, a Pandas DataFrame `df` is created with columns `name` and `age
 
 ### 3.6 Best Practices for Using Functions
 
-1. **Use Descriptive Names:** Function names should clearly describe what the function does.
+1. **Use Descriptive Names:** Function names should clearly describe what the function does and start with a verb (e.g., `calculate_area`, `get_max_value`).
 2. **Keep Functions Small and Focused:** A function should do one thing and do it well. If your function is getting too long, consider breaking it up into smaller functions.
 3. **Document Your Functions:** Use docstrings to explain what your function does, what parameters it takes, and what it returns.
 
@@ -438,9 +438,67 @@ def calculate_area(radius):
 
 In this example, the function `calculate_area` is well-documented with a docstring that explains what the function does, its parameters, and its return value.
 
+One more advanced way of documenting functions is to use *type hints*. Type hints are a way to specify what type of data a function expects to receive as arguments and what type of data it returns.  For our `calculate_area` function, we could add type hints as follows:
+
+```python
+def calculate_area(radius: float) -> float:
+    """
+    Calculate the area of a circle given its radius.
+
+    Parameters:
+    radius (float): The radius of the circle.
+
+    Returns:
+    float: The area of the circle.
+    """
+    return 3.14159 * radius ** 2
+```
+We are not required to use inputs of the type specified by the type hint.  For instance, calling `calculate_area(3)`, as would `calculate_area(np.array([3.0, 2.0]))`: in the first case we have given an integer as an input, and in the second case we have given a numpy array as an input.  What type hints do is tell us is *expected* behavior.
 ---
 
-## Section 4: Hands-on Practice
+## Section 5: Example: Approximating the Fourier Transform
+
+To put these ideas together, we are going to write a quick code that approximates a Fourier Transform.  For a function on the interval $[0, 2\pi]$, the Fourier Transform of a function $f(x)$ is given by
+
+$$
+\hat{f}(k) = \int_0^{2\pi} f(x) e^{-ikx} dx
+$$
+
+We are going to write a code that approximates it using a Riemann sum.
+
+```{code-cell} ipython3
+import numpy as np
+
+def fourier_transform(f_values: np.ndarray, x_values: np.ndarray, k: float) -> complex:
+    """
+    Approximate the Fourier Transform of a function f(x) using a Riemann sum.
+
+    Args:
+        f_values (np.ndarray): The function values f(x) at the x_values.
+        x_values (np.ndarray): The x values where f(x) is evaluated.
+        k (float): The value of k in the Fourier Transform.
+
+    Returns:
+        complex: The approximate Fourier Transform of f(x) at k.
+    """
+    dx = x_values[1] - x_values[0]
+    num_values = x_values.shape[0]
+
+    result = 0
+    for i in range(num_values):
+        complex_exp = np.exp(-1j * k * x_values[i])
+        result = result + f_values[i] * complex_exp * dx
+
+    return result
+```
+
+```{admonition} Exercise
+:class: exercise
+This code gives the wrong result when the x_values are not evenly spaced.  Can you fix it?
+```
+
+
+## Section 6: Hands-on Practice
 
 Now that you've learned about control structures in Python, it's time to put your knowledge into practice. Below are a series of exercises designed to help reinforce the concepts you've covered. Each exercise includes a hint to guide you if you need a little help getting started.
 

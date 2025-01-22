@@ -18,22 +18,21 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
+import numpy as np
 
-data = {"name": ["Alice", "Bob", "Charlie"], "age": [30, 25, 35]}
-df = pd.DataFrame(data)
+arr = np.array([1, 2, 3, 4, 5])
 
-for index, row in df.iterrows():
-    print(index, row["name"], row["age"])
+for element in arr:
+    print(element)
 ------------------
 
 
 [0;31m---------------------------------------------------------------------------[0m
 [0;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [0;32mIn[9], line 1[0m
-[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mpandas[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mpd[39;00m
-[1;32m      3[0m data [38;5;241m=[39m {[38;5;124m"[39m[38;5;124mname[39m[38;5;124m"[39m: [[38;5;124m"[39m[38;5;124mAlice[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mBob[39m[38;5;124m"[39m, [38;5;124m"[39m[38;5;124mCharlie[39m[38;5;124m"[39m], [38;5;124m"[39m[38;5;124mage[39m[38;5;124m"[39m: [[38;5;241m30[39m, [38;5;241m25[39m, [38;5;241m35[39m]}
-[1;32m      4[0m df [38;5;241m=[39m pd[38;5;241m.[39mDataFrame(data)
+Cell [0;32mIn[8], line 1[0m
+[0;32m----> 1[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mnumpy[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mnp[39;00m
+[1;32m      3[0m arr [38;5;241m=[39m np[38;5;241m.[39marray([[38;5;241m1[39m, [38;5;241m2[39m, [38;5;241m3[39m, [38;5;241m4[39m, [38;5;241m5[39m])
+[1;32m      5[0m [38;5;28;01mfor[39;00m element [38;5;129;01min[39;00m arr:
 
-[0;31mModuleNotFoundError[0m: No module named 'pandas'
+[0;31mModuleNotFoundError[0m: No module named 'numpy'
 

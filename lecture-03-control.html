@@ -61,8 +61,6 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'lecture-03-control';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -181,8 +179,7 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="lecture-04-optimization.html">Chapter 4: Chemical Reaction Equilibria and Roots of Equations</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture-05-integration.html">Chapter 5: Chemical Bonding and Numerical Integration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture-06a-intro_vectors.html">Chapter 6.1: A Deeper look at Vectors</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lecture-06-linalg.html">Chapter 6.2: Balancing Chemical Equations and Systems of Linear Algebraic Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecture-06-linalg.html">Chapter 6: Balancing Chemical Equations and Systems of Linear Algebraic Equations</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 3. Statistics — Regression and Correlation</span></p>
 <ul class="nav bd-sidenav">
@@ -221,6 +218,10 @@
 <li class="toctree-l1"><a class="reference internal" href="lecture-27-kinetic-mc.html">Chapter 25: Kinetic Monte Carlo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture-28-scikit-learn.html">Chapter 26: <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="lecture-29-nested-sampling.html">Chapter 27: Nested Sampling</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Part 8. Additional Materials</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="test_lecture.html">Lorem Ipsum</a></li>
 </ul>
 
     </div>
@@ -447,9 +448,7 @@
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-using-functions">3.6 Best Practices for Using Functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-are-not-required-to-use-inputs-of-the-type-specified-by-the-type-hint-for-instance-calling-calculate-area-3-as-would-calculate-area-np-array-3-0-2-0-in-the-first-case-we-have-given-an-integer-as-an-input-and-in-the-second-case-we-have-given-a-numpy-array-as-an-input-what-type-hints-do-is-tell-us-is-expected-behavior">We are not required to use inputs of the type specified by the type hint.  For instance, calling <code class="docutils literal notranslate"><span class="pre">calculate_area(3)</span></code>, as would <code class="docutils literal notranslate"><span class="pre">calculate_area(np.array([3.0,</span> <span class="pre">2.0]))</span></code>: in the first case we have given an integer as an input, and in the second case we have given a numpy array as an input.  What type hints do is tell us is <em>expected</em> behavior.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-example-approximating-the-fourier-transform">Section 5: Example: Approximating the Fourier Transform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-hands-on-practice">Section 6: Hands-on Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-hands-on-practice">Section 4: Hands-on Practice</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-check-if-a-number-is-even-or-odd">Exercise 1: Check if a Number is Even or Odd</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-sum-of-all-numbers-in-a-list">Exercise 2: Sum of All Numbers in a List</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-factorial-of-a-number">Exercise 3: Factorial of a Number</a></li>
@@ -741,11 +740,14 @@ city New York
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
-2
-3
-4
-5
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">arr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">element</span> <span class="ow">in</span> <span class="n">arr</span><span class="p">:</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
 </pre></div>
 </div>
 </div>
@@ -764,18 +766,6 @@ city New York
 
 <span class="k">for</span> <span class="n">index</span><span class="p">,</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">iterrows</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">index</span><span class="p">,</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;name&quot;</span><span class="p">],</span> <span class="n">row</span><span class="p">[</span><span class="s2">&quot;age&quot;</span><span class="p">])</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">9</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;Alice&quot;</span><span class="p">,</span> <span class="s2">&quot;Bob&quot;</span><span class="p">,</span> <span class="s2">&quot;Charlie&quot;</span><span class="p">],</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">35</span><span class="p">]}</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pandas&#39;
 </pre></div>
 </div>
 </div>
@@ -959,7 +949,7 @@ What do you think will occur if you remove the line <code class="docutils litera
 <section id="best-practices-for-using-functions">
 <h3>3.6 Best Practices for Using Functions<a class="headerlink" href="#best-practices-for-using-functions" title="Link to this heading">#</a></h3>
 <ol class="arabic simple">
-<li><p><strong>Use Descriptive Names:</strong> Function names should clearly describe what the function does and start with a verb (e.g., <code class="docutils literal notranslate"><span class="pre">calculate_area</span></code>, <code class="docutils literal notranslate"><span class="pre">get_max_value</span></code>).</p></li>
+<li><p><strong>Use Descriptive Names:</strong> Function names should clearly describe what the function does.</p></li>
 <li><p><strong>Keep Functions Small and Focused:</strong> A function should do one thing and do it well. If your function is getting too long, consider breaking it up into smaller functions.</p></li>
 <li><p><strong>Document Your Functions:</strong> Use docstrings to explain what your function does, what parameters it takes, and what it returns.</p></li>
 </ol>
@@ -978,69 +968,11 @@ What do you think will occur if you remove the line <code class="docutils litera
 </pre></div>
 </div>
 <p>In this example, the function <code class="docutils literal notranslate"><span class="pre">calculate_area</span></code> is well-documented with a docstring that explains what the function does, its parameters, and its return value.</p>
-<p>One more advanced way of documenting functions is to use <em>type hints</em>. Type hints are a way to specify what type of data a function expects to receive as arguments and what type of data it returns.  For our <code class="docutils literal notranslate"><span class="pre">calculate_area</span></code> function, we could add type hints as follows:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">calculate_area</span><span class="p">(</span><span class="n">radius</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Calculate the area of a circle given its radius.</span>
-
-<span class="sd">    Parameters:</span>
-<span class="sd">    radius (float): The radius of the circle.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">    float: The area of the circle.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="mf">3.14159</span> <span class="o">*</span> <span class="n">radius</span> <span class="o">**</span> <span class="mi">2</span>
-</pre></div>
-</div>
 </section>
 </section>
-<section id="we-are-not-required-to-use-inputs-of-the-type-specified-by-the-type-hint-for-instance-calling-calculate-area-3-as-would-calculate-area-np-array-3-0-2-0-in-the-first-case-we-have-given-an-integer-as-an-input-and-in-the-second-case-we-have-given-a-numpy-array-as-an-input-what-type-hints-do-is-tell-us-is-expected-behavior">
-<h2>We are not required to use inputs of the type specified by the type hint.  For instance, calling <code class="docutils literal notranslate"><span class="pre">calculate_area(3)</span></code>, as would <code class="docutils literal notranslate"><span class="pre">calculate_area(np.array([3.0,</span> <span class="pre">2.0]))</span></code>: in the first case we have given an integer as an input, and in the second case we have given a numpy array as an input.  What type hints do is tell us is <em>expected</em> behavior.<a class="headerlink" href="#we-are-not-required-to-use-inputs-of-the-type-specified-by-the-type-hint-for-instance-calling-calculate-area-3-as-would-calculate-area-np-array-3-0-2-0-in-the-first-case-we-have-given-an-integer-as-an-input-and-in-the-second-case-we-have-given-a-numpy-array-as-an-input-what-type-hints-do-is-tell-us-is-expected-behavior" title="Link to this heading">#</a></h2>
-</section>
-<section id="section-5-example-approximating-the-fourier-transform">
-<h2>Section 5: Example: Approximating the Fourier Transform<a class="headerlink" href="#section-5-example-approximating-the-fourier-transform" title="Link to this heading">#</a></h2>
-<p>To put these ideas together, we are going to write a quick code that approximates a Fourier Transform.  For a function on the interval <span class="math notranslate nohighlight">\([0, 2\pi]\)</span>, the Fourier Transform of a function <span class="math notranslate nohighlight">\(f(x)\)</span> is given by</p>
-<div class="math notranslate nohighlight">
-\[
-\hat{f}(k) = \int_0^{2\pi} f(x) e^{-ikx} dx
-\]</div>
-<p>We are going to write a code that approximates it using a Riemann sum.</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-
-<span class="k">def</span><span class="w"> </span><span class="nf">fourier_transform</span><span class="p">(</span><span class="n">f_values</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">x_values</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">,</span> <span class="n">k</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">complex</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Approximate the Fourier Transform of a function f(x) using a Riemann sum.</span>
-
-<span class="sd">    Args:</span>
-<span class="sd">        f_values (np.ndarray): The function values f(x) at the x_values.</span>
-<span class="sd">        x_values (np.ndarray): The x values where f(x) is evaluated.</span>
-<span class="sd">        k (float): The value of k in the Fourier Transform.</span>
-
-<span class="sd">    Returns:</span>
-<span class="sd">        complex: The approximate Fourier Transform of f(x) at k.</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">dx</span> <span class="o">=</span> <span class="n">x_values</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">x_values</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">num_values</span> <span class="o">=</span> <span class="n">x_values</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-
-    <span class="n">result</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_values</span><span class="p">):</span>
-        <span class="n">complex_exp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">k</span> <span class="o">*</span> <span class="n">x_values</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
-        <span class="n">result</span> <span class="o">=</span> <span class="n">result</span> <span class="o">+</span> <span class="n">f_values</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">*</span> <span class="n">complex_exp</span> <span class="o">*</span> <span class="n">dx</span>
-
-    <span class="k">return</span> <span class="n">result</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="exercise admonition">
-<p class="admonition-title">Exercise</p>
-<p>This code gives the wrong result when the x_values are not evenly spaced.  Can you fix it?</p>
-</div>
-</section>
-<section id="section-6-hands-on-practice">
-<h2>Section 6: Hands-on Practice<a class="headerlink" href="#section-6-hands-on-practice" title="Link to this heading">#</a></h2>
+<hr class="docutils" />
+<section id="section-4-hands-on-practice">
+<h2>Section 4: Hands-on Practice<a class="headerlink" href="#section-4-hands-on-practice" title="Link to this heading">#</a></h2>
 <p>Now that you’ve learned about control structures in Python, it’s time to put your knowledge into practice. Below are a series of exercises designed to help reinforce the concepts you’ve covered. Each exercise includes a hint to guide you if you need a little help getting started.</p>
 <section id="exercise-1-check-if-a-number-is-even-or-odd">
 <h3>Exercise 1: Check if a Number is Even or Odd<a class="headerlink" href="#exercise-1-check-if-a-number-is-even-or-odd" title="Link to this heading">#</a></h3>
@@ -1237,9 +1169,7 @@ Write a Python program to generate the first <code class="docutils literal notra
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#best-practices-for-using-functions">3.6 Best Practices for Using Functions</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#we-are-not-required-to-use-inputs-of-the-type-specified-by-the-type-hint-for-instance-calling-calculate-area-3-as-would-calculate-area-np-array-3-0-2-0-in-the-first-case-we-have-given-an-integer-as-an-input-and-in-the-second-case-we-have-given-a-numpy-array-as-an-input-what-type-hints-do-is-tell-us-is-expected-behavior">We are not required to use inputs of the type specified by the type hint.  For instance, calling <code class="docutils literal notranslate"><span class="pre">calculate_area(3)</span></code>, as would <code class="docutils literal notranslate"><span class="pre">calculate_area(np.array([3.0,</span> <span class="pre">2.0]))</span></code>: in the first case we have given an integer as an input, and in the second case we have given a numpy array as an input.  What type hints do is tell us is <em>expected</em> behavior.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-5-example-approximating-the-fourier-transform">Section 5: Example: Approximating the Fourier Transform</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-6-hands-on-practice">Section 6: Hands-on Practice</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#section-4-hands-on-practice">Section 4: Hands-on Practice</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-1-check-if-a-number-is-even-or-odd">Exercise 1: Check if a Number is Even or Odd</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-2-sum-of-all-numbers-in-a-list">Exercise 2: Sum of All Numbers in a List</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-3-factorial-of-a-number">Exercise 3: Factorial of a Number</a></li>

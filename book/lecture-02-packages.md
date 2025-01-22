@@ -99,6 +99,20 @@ M = np.array([[1, 2], [3, 4]])
 print(M)
 ```
 
+#### Introspecting Arrays
+
+NumPy arrays have several attributes that provide useful information about the array, such as its shape or data type:
+
+```{code-cell} ipython3
+# Get the shape of the matrix
+print(M.shape)
+
+# Get the data type of the matrix
+print(M.dtype)
+```
+
+Note that the `shape` attribute returns a tuple (a data structure similar to a list) containing the dimensions of the array.  The first element of the tuple represents the number of rows, the second element represents the number of columns (if there is a second index), and so on.
+
 #### Matrix and Vector Operations
 
 Matrix and vector operations are fundamental in quantum chemistry and many other areas of chemical science. NumPy simplifies these operations:

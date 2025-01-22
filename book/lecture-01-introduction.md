@@ -150,6 +150,19 @@ In this example, you’ve seen your first instance of importing a module in Pyth
 
 Once imported, you can use any function from the module by prefixing it with `math`. For instance, `math.sqrt()` is the function to compute the square root.
 
+Python also supports complex numbers, using the `j` suffix to denote the imaginary unit:
+
+```{code-cell} ipython3
+1 + 2j
+```
+
+You can perform arithmetic operations with complex numbers just like you would with real numbers.
+For instance, the following code should return $5 + 0j$.
+```{code-cell} ipython3
+(1 + 2j) * (1 - 2j)
+```
+
+
 ---
 
 ### 3.2 Practice Exercises

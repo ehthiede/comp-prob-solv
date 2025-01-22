@@ -453,10 +453,12 @@ def calculate_area(radius: float) -> float:
     """
     return 3.14159 * radius ** 2
 ```
+
 We are not required to use inputs of the type specified by the type hint.  For instance, calling `calculate_area(3)`, as would `calculate_area(np.array([3.0, 2.0]))`: in the first case we have given an integer as an input, and in the second case we have given a numpy array as an input.  What type hints do is tell us is *expected* behavior.
+
 ---
 
-## Section 5: Example: Approximating the Fourier Transform
+## Section 4: Example: Approximating the Fourier Transform
 
 To put these ideas together, we are going to write a quick code that approximates a Fourier Transform.  For a function on the interval $[0, 2\pi]$, the Fourier Transform of a function $f(x)$ is given by
 
@@ -498,7 +500,7 @@ This code gives the wrong result when the x_values are not evenly spaced.  Can y
 ```
 
 
-## Section 6: Hands-on Practice
+## Section 5: Hands-on Practice
 
 Now that you've learned about control structures in Python, it's time to put your knowledge into practice. Below are a series of exercises designed to help reinforce the concepts you've covered. Each exercise includes a hint to guide you if you need a little help getting started.
 

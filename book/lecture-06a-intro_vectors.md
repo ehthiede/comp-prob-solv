@@ -17,6 +17,11 @@ kernelspec:
 
 By the end of this lecture, you should be able to:
 
+- Define a vector space and an inner product space.
+- Understand basic vector operations, including addition, scalar multiplication, and the dot product.
+- Define a matrix and matrix multiplication.
+
+
 <!-- 1. **Encode Data in Vectors** by discretizing or featurizing data. -->
 <!-- 2. **Apply Matrix Multiplications** for stoichiometric coefficients using Python and NumPy. -->
 <!-- 3. **Apply the null space method** to find balanced coefficients for chemical reactions. -->
